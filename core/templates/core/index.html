@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Landing Home Page For Zamazon E-commerce Plartform {% endblock %}
+{% block content %}
+<div class="container">
+    <div class="productTitle">
+        <h1>Products in Stock</h1>
+    </div>
+    <div class="gContainer">
+    {% for item in products %}
+    <div class="gridContainer">
+        <div class="product">
+            <div class="productImage">
+                <img height="100%" width="100%" src="{{item.image.url}}" alt="">
+            </div>
+            <div class="description">
+                <p id="productName"><strong>Product Name: {{item.pname}}</strong></p><hr>
+                <p id="productPrice">Price: ${{item.price}}</p><hr>
+            </div>
+            <div class="btns">
+                <button id="viewBtn">View</button>
+                <button id="addBtn">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}

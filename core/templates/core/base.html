@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamazon | {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'baseStyles.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/pngtree-cyan-background-high-quality-wallpaper-victor-blue-yellow-free-image_1074104.jpg' %}">
+</head>
+<body>
+    <div class="topNavigation">
+        <div class="logo">
+            <h1>Zamazon</h1>
+        </div>
+        <div class="categories">
+            <h2>Categories :</h2>
+            <ul>
+                <li><a href="#">Food</a></li>
+                <li><a href="#">Electronics</a></li>
+                <li><a href="#">Clothing</a></li>
+                <li><a href="#">Health & Beauty</a></li>
+                <li><a href="#">Sports & Outdoors</a></li>
+                <li><a href="#">Books</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </div>
+        <div class="searchArea">
+            <input id="searcher" type="text" placeholder="bathing soap, perfume"/>
+            <label for="searcher">Search</label>
+        </div>
+    </div>
+    {% block content %}
+    {% endblock%}
+</body>
+</html>
